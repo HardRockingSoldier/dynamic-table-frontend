@@ -1,0 +1,18 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of dynamicTable.dynamicTableColumns">
+          {{ column.headerText }}
+        </th>
+      </tr>
+    </thead>
+    <tbody class="my-table body">
+      <tr *ngFor="let row of dynamicTable.dynamicTableRows">
+        <td *ngFor="let entry of row.dynamicTableRowEntries">
+          {{ entry.columnText }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

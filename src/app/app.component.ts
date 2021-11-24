@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {
-  DynamicTable,
-  DynamicTableColumn,
-  DynamicTableRow,
-  DynamicTableRowEntry,
-} from './dynamic-table';
+import { DynamicTable } from './dynamic-table';
 
 @Component({
   selector: 'my-app',
