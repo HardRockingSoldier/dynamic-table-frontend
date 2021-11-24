@@ -1,4 +1,5 @@
 <div>
+  {{ dynamicTable.tableName }}
   <table>
     <thead>
       <tr>
@@ -12,6 +13,7 @@
         <td *ngFor="let entry of row.dynamicTableRowEntries">
           {{ entry.columnText }}
         </td>
+        <td><input type="checkbox" /></td>
       </tr>
     </tbody>
   </table>

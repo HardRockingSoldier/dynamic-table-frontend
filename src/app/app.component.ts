@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
     dynamicTableColumns: [
       { id: 1, headerText: 'Spaltenüberschrift 1' },
       { id: 2, headerText: 'Spaltenüberschrift 2' },
+      { id: 3, headerText: 'Erledigt?' },
     ],
     dynamicTableRows: [
       {
@@ -26,7 +27,7 @@ export class AppComponent implements OnInit {
       },
       {
         id: 2,
-        completed: false,
+        completed: true,
         dynamicTableRowEntries: [
           { id: 3, columnText: 'Eintrag 3' },
           { id: 4, columnText: 'Eintrag 4' },
