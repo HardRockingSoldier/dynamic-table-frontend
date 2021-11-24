@@ -44,5 +44,9 @@ export class AppComponent implements OnInit {
     ],
   };
 
+  toggle(e: boolean) {
+    console.log(this.dynamicTable.dynamicTableRows[0].completed);
+  }
+
   ngOnInit(): void {}
 }

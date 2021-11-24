@@ -14,7 +14,11 @@
           {{ entry.columnText }}
         </td>
         <td *ngIf="row.completed != undefined">
-          <input type="checkbox" [(ngModel)]="row.completed" />
+          <input
+            type="checkbox"
+            [(ngModel)]="row.completed"
+            (change)="toggle($event)"
+          />
         </td>
       </tr>
     </tbody>
