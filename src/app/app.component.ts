@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
     ],
   };
 
-  toggle(e: boolean) {
+  toggle() {
     console.log(this.dynamicTable.dynamicTableRows[0].completed);
   }
 
