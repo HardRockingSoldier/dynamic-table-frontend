@@ -1,12 +1,8 @@
 export interface DynamicTable {
   id: number;
   tableName: string;
-  dynamicTableColumns: {
-    [key: string]: DynamicTableColumn;
-  };
-  dynamicTableRows: {
-    [key: string]: DynamicTableColumn;
-  };
+  dynamicTableColumns: DynamicTableColumn[];
+  dynamicTableRows: DynamicTableRow[];
 }
 
 export interface DynamicTableColumn {
@@ -17,9 +13,7 @@ export interface DynamicTableColumn {
 export interface DynamicTableRow {
   id: number;
   completed: boolean;
-  dynamicTableRowEntry: {
-    [key: string]: DynamicTableRowEntry;
-  };
+  dynamicTableRowEntries: DynamicTableRowEntry[];
 }
 
 export interface DynamicTableRowEntry {

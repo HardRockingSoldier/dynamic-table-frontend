@@ -13,18 +13,32 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  dynamicTableRowEntries: DynamicTableRowEntry[];
+  dynamicTable: DynamicTable = {
+    id: 1,
+    tableName: 'Meine erste Tabelle',
+    dynamicTableColumns: [
+      { id: 1, headerText: 'Spaltenüberschrift 1' },
+      { id: 2, headerText: 'Spaltenüberschrift 2' },
+    ],
+    dynamicTableRows: [
+      {
+        id: 1,
+        completed: false,
+        dynamicTableRowEntries: [
+          { id: 1, columnText: 'Eintrag 1' },
+          { id: 2, columnText: 'Eintrag 2' },
+        ],
+      },
+      {
+        id: 2,
+        completed: false,
+        dynamicTableRowEntries: [
+          { id: 3, columnText: 'Eintrag 3' },
+          { id: 4, columnText: 'Eintrag 4' },
+        ],
+      },
+    ],
+  };
 
-  ngOnInit(): void {
-    this.dynamicTableRowEntries = [
-      { id: 1, columnText: 'test1' },
-      { id: 2, columnText: 'test2' },
-      { id: 3, columnText: 'test3' },
-      { id: 4, columnText: 'test4' },
-    ];
-
-    for (let i of this.dynamicTableRowEntries) {
-      console.log(i.columnText);
-    }
-  }
+  ngOnInit(): void {}
 }
