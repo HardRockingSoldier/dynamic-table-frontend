@@ -13,7 +13,7 @@
         <td *ngFor="let entry of row.dynamicTableRowEntries">
           {{ entry.columnText }}
         </td>
-        <td>
+        <td *ngIf="row.completed != undefined">
           <input type="checkbox" [(ngModel)]="row.completed" />
         </td>
       </tr>

@@ -33,6 +33,14 @@ export class AppComponent implements OnInit {
           { id: 4, columnText: 'Eintrag 4' },
         ],
       },
+      {
+        id: 3,
+        completed: undefined,
+        dynamicTableRowEntries: [
+          { id: 5, columnText: 'Eintrag 5' },
+          { id: 6, columnText: 'Eintrag 6' },
+        ],
+      },
     ],
   };
 
