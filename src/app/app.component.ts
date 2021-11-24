@@ -16,10 +16,12 @@ export class AppComponent implements OnInit {
   dynamicTableRowEntries: DynamicTableRowEntry[];
 
   ngOnInit(): void {
-    this.dynamicTableRowEntries.push({
-      id: 1,
-      columnText: '',
-    });
+    this.dynamicTableRowEntries = [
+      { id: 1, columnText: 'test1' },
+      { id: 2, columnText: 'test2' },
+      { id: 3, columnText: 'test3' },
+      { id: 4, columnText: 'test4' },
+    ];
 
     for (let i of this.dynamicTableRowEntries) {
       console.log(i.columnText);
