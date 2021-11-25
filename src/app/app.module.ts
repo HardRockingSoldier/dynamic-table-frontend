@@ -4,8 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
+import { MatChipsModule } from '@angular/material/chips';
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, MatChipsModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
