@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component } from '@angular/core';
 
 export interface Vegetable {
   name: string;
@@ -10,7 +10,7 @@ export interface Vegetable {
   templateUrl: './dynamic-table-configurator.component.html',
   styleUrls: ['./dynamic-table-configurator.component.css'],
 })
-export class DynamicTableConfiguratorComponent implements OnInit {
+export class DynamicTableConfiguratorComponent {
   vegetables: Vegetable[] = [
     { name: 'apple' },
     { name: 'banana' },
@@ -23,8 +23,4 @@ export class DynamicTableConfiguratorComponent implements OnInit {
   drop(event: CdkDragDrop<Vegetable[]>) {
     moveItemInArray(this.vegetables, event.previousIndex, event.currentIndex);
   }
-
-  constructor() {}
-
-  ngOnInit() {}
 }
