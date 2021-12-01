@@ -1,33 +1,31 @@
-<!--
-<div>
-  {{ dynamicTable.tableName }}
-  <table>
-    <thead>
-      <tr>
-        <th *ngFor="let column of dynamicTable.dynamicTableColumns">
-          {{ column.headerText }}
-        </th>
-      </tr>
-    </thead>
-    <tbody class="my-table body">
-      <tr *ngFor="let row of dynamicTable.dynamicTableRows">
-        <td *ngFor="let entry of row.dynamicTableRowEntries">
-          {{ entry.columnText }}
-        </td>
-        <td *ngIf="row.completed != undefined">
-          <input
-            type="checkbox"
-            [(ngModel)]="row.completed"
-            (change)="toggle()"
-          />
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
--->
-
 <mat-tab-group>
-  <mat-tab label="First"> Tabellenübersicht </mat-tab>
-  <mat-tab label="Second"> Tabellenkonfigurator </mat-tab>
+  <mat-tab label="Tabellenübersicht">
+    <div>
+      {{ dynamicTable.tableName }}
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let column of dynamicTable.dynamicTableColumns">
+              {{ column.headerText }}
+            </th>
+          </tr>
+        </thead>
+        <tbody class="my-table body">
+          <tr *ngFor="let row of dynamicTable.dynamicTableRows">
+            <td *ngFor="let entry of row.dynamicTableRowEntries">
+              {{ entry.columnText }}
+            </td>
+            <td *ngIf="row.completed != undefined">
+              <input
+                type="checkbox"
+                [(ngModel)]="row.completed"
+                (change)="toggle()"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  <mat-tab label="Tabellenkonfigurator"> </mat-tab>
 </mat-tab-group>
