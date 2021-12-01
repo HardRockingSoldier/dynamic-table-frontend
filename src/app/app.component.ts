@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { DynamicTable } from './dynamic-table';
 
 export interface Vegetable {
