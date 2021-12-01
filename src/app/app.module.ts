@@ -4,8 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
+import { MatTabsModule } from '@angular/material/tabs';
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, MatTabsModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

@@ -53,17 +53,4 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  vegetables: Vegetable[] = [
-    { name: 'apple' },
-    { name: 'banana' },
-    { name: 'strawberry' },
-    { name: 'orange' },
-    { name: 'kiwi' },
-    { name: 'cherry' },
-  ];
-
-  drop(event: CdkDragDrop<Vegetable[]>) {
-    moveItemInArray(this.vegetables, event.previousIndex, event.currentIndex);
-  }
 }
